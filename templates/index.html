@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h1>Temperature Converter</h1>
+    <form method="POST">
+        <input type="text" name="temperature" placeholder="Enter temperature" required>
+        <select name="conversion">
+            <option value="CtoF">Celsius to Fahrenheit</option>
+            <option value="FtoC">Fahrenheit to Celsius</option>
+        </select>
+        <button type="submit">Convert</button>
+    </form>
+
+    {% if result is not none %}
+        <h2>Converted Temperature: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
